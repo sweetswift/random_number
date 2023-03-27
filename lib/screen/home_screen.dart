@@ -31,6 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
               onPressed: () {},
               icon: Icon(
                 Icons.settings,
+                color: RED_COLOR,
               ),
             ),
           ],
@@ -48,6 +49,9 @@ class _HomeScreenState extends State<HomeScreen> {
         SizedBox(
           width: double.infinity,
           child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: RED_COLOR
+            ),
             onPressed: () {},
             child: Text('생성하기!'),
           ),
