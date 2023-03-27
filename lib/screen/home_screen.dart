@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:random_number/constant/color.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -11,13 +12,21 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: PRIMARY_COLOR,
         body: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('랜덤숫자 생성기'),
+            Text(
+              '랜덤숫자 생성기',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 30.0,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
             IconButton(
               onPressed: () {},
               icon: Icon(
