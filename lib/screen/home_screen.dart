@@ -9,6 +9,12 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  List<int>  randomNumbers = [
+    123,
+    456,
+    789,
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,11 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Expanded(
                   child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        123,
-                        456,
-                        789,
-                      ]
+                      children: randomNumbers
                       .asMap()
                       .entries
                           .map(
