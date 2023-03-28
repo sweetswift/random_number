@@ -11,11 +11,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  List<int> randomNumbers = [
-    123,
-    456,
-    789,
-  ];
+  List<int> randomNumbers = [];
 
   @override
   Widget build(BuildContext context) {
