@@ -43,49 +43,28 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 Expanded(
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Row(
-                          children: 123
-                              .toString()
-                              .split('')
-                              .map(
-                                (x) => Image.asset(
-                                  'asset/img/$x.png',
-                                  height: 70.0,
-                                  width: 50.0,
-                                ),
-                              )
-                              .toList()
-                      ),
-                      Row(
-                          children: 456
-                              .toString()
-                              .split('')
-                              .map(
-                                (x) => Image.asset(
-                              'asset/img/$x.png',
-                              height: 70.0,
-                              width: 50.0,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        123,
+                        456,
+                        789,
+                      ]
+                          .map(
+                            (x) => Row(
+                              children: x
+                                  .toString()
+                                  .split('')
+                                  .map(
+                                    (y) => Image.asset(
+                                      'asset/img/$y.png',
+                                      height: 70.0,
+                                      width: 50.0,
+                                    ),
+                                  )
+                                  .toList(),
                             ),
                           )
-                              .toList()
-                      ),
-                      Row(
-                          children: 789
-                              .toString()
-                              .split('')
-                              .map(
-                                (x) => Image.asset(
-                              'asset/img/$x.png',
-                              height: 70.0,
-                              width: 50.0,
-                            ),
-                          )
-                              .toList()
-                      ),
-                    ],
-                  ),
+                          .toList()),
                 ),
                 SizedBox(
                   width: double.infinity,
