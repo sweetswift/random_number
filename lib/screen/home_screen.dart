@@ -48,9 +48,12 @@ void onSettingsPop () async {
       ),
     );
 
-    setState(() {
-      maxNumber = result!;
-    });
+    if(result != null){
+      setState(() {
+        maxNumber = result!;
+      });
+    }
+
   }
 
 
