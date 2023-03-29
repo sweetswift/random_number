@@ -51,7 +51,7 @@ class _SettingScreenState extends State<SettingScreen> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).pop();
+                  Navigator.of(context).pop(maxNumber.toInt());
                 },
                 style: ElevatedButton.styleFrom(backgroundColor: RED_COLOR),
                 child: Text('저장!'),
