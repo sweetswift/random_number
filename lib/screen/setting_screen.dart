@@ -50,7 +50,9 @@ class _SettingScreenState extends State<SettingScreen> {
                 },
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
                 style: ElevatedButton.styleFrom(backgroundColor: RED_COLOR),
                 child: Text('저장!'),
               ),
