@@ -38,7 +38,8 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
-void onSettingsPop () async {
+
+  void onSettingsPop() async {
     //setting 화면 이동
     final result = await Navigator.of(context).push<int>(
       MaterialPageRoute(
@@ -48,14 +49,12 @@ void onSettingsPop () async {
       ),
     );
 
-    if(result != null){
+    if (result != null) {
       setState(() {
         maxNumber = result!;
       });
     }
-
   }
-
 
   onRandomNumberGenerate() {
     final rand = Random();
@@ -77,7 +76,8 @@ void onSettingsPop () async {
 
 class _Header extends StatelessWidget {
   final VoidCallback onPressed;
-  const _Header({required this.onPressed,Key? key}) : super(key: key);
+
+  const _Header({required this.onPressed, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -93,7 +93,7 @@ class _Header extends StatelessWidget {
           ),
         ),
         IconButton(
-          onPressed:onPressed,
+          onPressed: onPressed,
           icon: Icon(
             Icons.settings,
             color: RED_COLOR,

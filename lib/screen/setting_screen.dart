@@ -25,7 +25,8 @@ class _SettingScreenState extends State<SettingScreen> {
             children: [
               Expanded(
                 child: Row(
-                    children: maxNumber.toInt()
+                    children: maxNumber
+                        .toInt()
                         .toString()
                         .split('')
                         .map(
@@ -45,8 +46,6 @@ class _SettingScreenState extends State<SettingScreen> {
                   setState(() {
                     maxNumber = val;
                   });
-
-
                 },
               ),
               ElevatedButton(
