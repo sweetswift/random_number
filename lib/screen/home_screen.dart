@@ -44,7 +44,9 @@ class _HomeScreenState extends State<HomeScreen> {
     final result = await Navigator.of(context).push<int>(
       MaterialPageRoute(
         builder: (BuildContext context) {
-          return SettingScreen();
+          return SettingScreen(
+            maxNumber: maxNumber,
+          );
         },
       ),
     );
