@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:random_number/constant/color.dart';
 
 class SettingScreen extends StatefulWidget {
-  const SettingScreen({Key? key}) : super(key: key);
+  final int maxNumber;
+
+  const SettingScreen({required this.maxNumber, Key? key}) : super(key: key);
 
   @override
   State<SettingScreen> createState() => _SettingScreenState();
@@ -10,6 +12,13 @@ class SettingScreen extends StatefulWidget {
 
 class _SettingScreenState extends State<SettingScreen> {
   double maxNumber = 1000;
+
+  @override
+  void initState() {
+    super.initState();
+
+    maxNumber = widget.maxNumber.toDouble();
+  }
 
   @override
   Widget build(BuildContext context) {
